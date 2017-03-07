@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <nav>
+            <p>小薇学院</p>
+            <ul>
+                <li><a href = "小薇学院/task_1_1_1.html" onload="this.href = ">task1</a></li>
+            </ul>
+
+        </nav>
+        <script type="text/javascript">
+            for (i = 0; i < document.getElementsByTagName("a").length; i++) {
+                document.getElementsByTagName("a")[i].href = "https://ycitsme.github.io/ife_2017spring/" + document.getElementsByTagName("a")[i].href;
+            }
+        </script>
+    </body>
+</html>
