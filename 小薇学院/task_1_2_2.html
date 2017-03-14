@@ -6,19 +6,6 @@
         body{
             font-family:"Microsoft YaHei",微软雅黑;
         }
-        .head{
-            background-color: rgb(51,51,51);
-        }
-        /*后代选择器*/
-        .head1 {
-            float: left;
-        }
-        .head2 {
-            float: right;
-        }
-        .head2 li {
-            display: inline-block;
-        }
         .clearfix:after {
             content: ".";
             display:block;
@@ -27,18 +14,43 @@
             visibility: hidden;
             overflow: none;
         }
-        .body {
+        header{
+            background-color: rgb(51,51,51);
+            height: 50px;
+        }
+        /*后代选择器*/
+
+        header figure{
+            float: left;
+            margin: 0px 0 0 50px;
+        }
+        header nav{
+            float: right;
+            margin-top: 0;
+            margin-right:50px;
+        }
+        header nav li {
+            display: inline-block;
+        }
+        header nav a:link {
+            color:white;
+        }
+        header nav a:visited {
+            color:#ccc;
+        }
+
+        section {
             border: 1px rgba(111,111,111,0) solid; /*Add border to avoid margin collapsing */
             background-color: rgb(222,222,222);
         }
-        .content {
+        section article,aside {
             width: 90%;
             background-color: white;
             margin: 20px auto;
             padding: 20px;
             border: 1px rgb(230,230,230) solid;
         }
-        .img {
+        section article figure {
             width: 200px;
             height: 200px;
             text-align: center;
@@ -46,39 +58,47 @@
             margin-top: 20px;
             border: 1px grey solid;
         }
-        .table {
+        section article .table {
             width: 100%;
             border-collapse: collapse;
         }
-        .table thead {
+        section article .table thead {
             background-color: #333;
             color: white;
         }
-        .table tbody td{
+        section article .table tbody td{
             border:1px solid #ccc;
         }
-        .table tfoot {
+        section article .table tfoot {
             background-color: rgb(204,204,204);
             font-weight: bolder;
         }
-        .form{
-            position: relative;
-            /*border:1px solid grey;*/
+        aside h2 {
+            border-left: 3px #ccc solid;
+            padding-left: 5px;
         }
-        .form .left{
+        aside .form {
+            /*border: 1px red solid;*/
+        }
+        aside .form fieldset {
+            border: none;
+        }
+        aside .form fieldset label{
+            display: inline-block;
+            width: 45%;
+            margin-right: 10px;
             text-align: right;
-            position: absolute;
-            right: 60%;
+            vertical-align: top;
         }
-        div.right {
-            display: inline;
-        }
-        .form .right{
+        aside .form fieldset .right{
+            display: inline-block;
             text-align: left;
-            position: absolute;
-            left: 41%;
         }
-        .button {
+        aside .form fieldset .right div{
+            margin-top: 10px;
+            color: #ccc;
+        }
+        aside .form .button {
             margin-top:10px;
             width: 100%;
             background-color: rgb(51,85,208);
@@ -87,43 +107,42 @@
             height: 40px;
         }
 
-        .foot {
+        footer {
             background-color: rgb(51,51,51);
             color: white;
         }
-        .foot1 {
+        footer .foot1 {
             /*height: 20px;*/
             text-align: center;
         }
-
     </style>
 </head>
 <body>
     <!-- Head -->
-    <div class="head clearfix">
-        <div class="head1">
-            <img src="baidulogo2.png" alt="baidulogo", height="50px">
-        </div>
-        <div class="head2">
+    <header class="clearfix">
+        <figure class="head1">
+            <img src="baidulogo2.png" alt="baidulogo", height="40px" width="100px">
+        </figure>
+        <nav>
             <ul>
-                <li><a href="#">导航链接一</a></li>
-                <li><a href="#">导航链接二</a></li>
-                <li><a href="#">导航链接三</a></li>
-                <li><a href="#">导航链接四</a></li>
+                <li><a href="#article1">导航链接一</a></li>
+                <li><a href="#article2">导航链接二</a></li>
+                <li><a href="#article3">导航链接三</a></li>
+                <li><a href="#article4">导航链接四</a></li>
             </ul>
-        </div>
-    </div>
+        </nav>
+    </header>
     <!-- Body -->
-    <div class="body">
-        <div class="content">
+    <section>
+        <article id="article1">
             <h1>文章一级标题</h1>
             <h2>文章二级标题</h2>
             <h3>文章作者 文章发表时间</h3>
             <p>&nbsp;&nbsp;这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://life.baidu.com">里有一个链接链接到http://life.baidu.com</a>这是一个很长很长 的段落，这是一个很长很长的段落,这是一个很长很长 的段落，这是一个很长很长的段落这是一个很长很长 的段落，这是一个很长很长的段落这是一个很长很长 的段落，这是一个很长很长的段落.</p>
             <img src="算盘.jpg" alt="">
             <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://life.baidu.com">里有一个链接链接到http://life.baidu.com</a>这是一个很长很长 的段落，这是一个很长很长的段落,这是一个很长很长 的段落，这是一个很长很长的段落这是一个很长很长 的段落，这是一个很长很长的段落这是一个很长很长 的段落，这是一个很长很长的段落.</p>
-        </div>
-        <div class="content">
+        </article>
+        <article id="article2">
             <h1>另一篇文章一级标题</h1>
             <h2>文章二级标题</h2>
             <h3>文章作者 文章发表时间</h3>
@@ -135,51 +154,53 @@
                 <li>列表项目二</li>
                 <li>列表项目三</li>
             </ul>
-        </div>
-        <div class="content">
+        </article>
+        <article id="article3">
             <h1>图片</h1>
-            <div class="img">
-                <p>好看的图片</p>
+            <figure>
+                <figcaption>好看的图片</figcaption>
                 <img src="算盘.jpg" alt="" height="100px;">
-            </div>
-            <div class="img">
-                <p>好看的图片</p>
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
                 <img src="算盘.jpg" alt="" height="100px;">
-            </div>
-            <div class="img">
-                <p>好看的图片</p>
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
                 <img src="算盘.jpg" alt="" height="100px;">
-            </div>
-            <div class="img">
-                <p>好看的图片</p>
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
                 <img src="算盘.jpg" alt="" height="100px;">
-            </div>
-            <div class="img">
-                <p>好看的图片</p>
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
                 <img src="算盘.jpg" alt="" height="100px;">
-            </div>
-            <div class="img">
-                <p>好看的图片</p>
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
                 <img src="算盘.jpg" alt="" height="100px;">
-            </div>
-            <div class="img">
-                <p>好看的图片</p>
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
                 <img src="算盘.jpg" alt="" height="100px;">
-            </div>
-            <div class="img">
-                <p>好看的图片</p>
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
                 <img src="算盘.jpg" alt="" height="100px;">
-            </div>
-            <div class="img">
-                <p>好看的图片</p>
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
                 <img src="算盘.jpg" alt="" height="100px;">
-            </div>
-            <div class="img">
-                <p>好看的图片</p>
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
                 <img src="算盘.jpg" alt="" height="100px;">
-            </div>
-        </div>
-        <div class="content">
+            </figure>
+
+
+        </article>
+        <article id="article4">
             <h1>最后一篇文章一级标题</h1>
             <h2>文章二级标题</h2>
             <h3>文章作者 文章发表时间</h3>
@@ -214,48 +235,74 @@
                     </tr>
                 </tfoot>
             </table>
-        </div>
-        <div class="content">
-            <h1>这里以后是一个侧栏，这是侧栏的标题</h1>
-            <form class="form" action="index.html" method="post">
-                <label for="mail" class="left">请输入邮箱地址</label> <input class="right"  type="text" name="" value=""> <br>
+        </article>
+        <aside>
+            <h2>这里以后是一个侧栏，这是侧栏的标题</h2>
+            <form class="form" action="/register.php" method="post">
+                <fieldset>
+                    <label for="mail">请输入邮箱地址</label>
+                    <div class="right">
+                        <input type="text" name="mail" value="@example.com">
+                        <div>邮箱地址请按要求格式输入</div>
+                    </div>
+                </fieldset>
 
-                <span class="right" >邮箱地址请按要求格式输入</span> <br>
+                <fieldset>
+                    <label for="password" class="left">请输入密码</label>
+                    <div class="right">
+                        <input type="text" name="password" value="">
+                    </div>
+                </fieldset>
 
-                <label for="password" class="left">请输入密码</label><input class="right"  type="text" name="" value=""> <br>
+                <fieldset>
+                    <label for="password" class="left">请重复输入密码</label>
+                    <div class="right">
+                        <input class="right"  type="text" name="" value="">
+                        <div>密码请为6-16位英文数字</div>
+                    </div>
+                </fieldset>
 
-                <label for="password" class="left">请重复输入密码</label><input class="right"  type="text" name="" value=""> <br>
+                <fieldset>
+                    <label for="gender" class="left">性别</label>
+                    <div class="right">
+                        <input  type="radio" name="gender" value="男" checked><span>男</span>
+                        <input type="radio" name="gender" value="女"><span>女</span>
+                    </div><br>
+                </fieldset>
 
-                <span class="right" >密码请为6-16位英文数字</span><br>
+                <fieldset>
+                    <label for="city" class="left">城市</label>
+                    <select class="right" name="city">
+                        <option value="北京">北京</option>
+                        <option value="北京">上海</option>
+                    </select>
+                </fieldset>
 
-                <label for="gender" class="left">性别</label>
+                <fieldset>
+                    <label for="interest" class="left">爱好</label>
+                    <div class="right">
+                        <input type="checkbox" name="interest" value="运动"><span>运动</span>
+                        <input type="checkbox" name="interest" value="艺术"><span>艺术</span>
+                        <input type="checkbox" name="interest" value="科学"><span>科学</span>
+                    </div>
+                </fieldset>
 
-                <div class="right">
-                    <input  type="radio" name="gender" value="男" checked><span>男</span> <input type="radio" name="gender" value="女"><span>女</span>
-                </div><br>
+                <fieldset>
+                    <label for="description" class="left">个人描述</label>
+                    <div class="right">
+                        <textarea name="description" rows="10" cols="30">这里输入个人描述</textarea>
+                    </div>
+                </fieldset>
 
-                <label for="city" class="left">城市</label> <select class="right"  class="" name="城市">
-                    <option value="北京">北京</option>
-                </select><br>
-
-                <label for="interest" class="left">爱好 </label>
-                <div class="right">
-                    <input type="checkbox" name="爱好" value="运动"><span>运动</span> <input type="checkbox" name="爱好" value="艺术"><span>艺术</span> <input type="checkbox" name="爱好" value="科学"><span>科学</span>
-                </div><br>
-
-                <label for="description" class="left">个人描述</label><input  class="right" type="textarea" name="" value=""><br>
                 <input class="button" type="submit" name="" value="确认提交">
-                <br>
             </form>
-        </div>
-        <div>
-        </div>
-    </div>
+        </aside>
+    </section>
     <!-- Foot -->
-    <div class="foot">
+    <footer>
         <div class="foot1">
             版权所有&copy;
         </div>
-    </div>
+    </footer>
 </body>
 </html>
