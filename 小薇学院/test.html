@@ -1,46 +1,28 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <style type="text/css">
-            .head{
-                height: 100px;
-                background-color: red;
-            }
-            .body {
-                height: 100px;
-                background-color: blue;
-            }
-            .content {
-                /*margin-top: 20px;*/
-                /*margin-bottom: 100px;*/
-                -webkit-margin-before:10px;
-                background-color: green;
-            }
-            .foot {
-                height: 100px;
-                background-color: purple;
-            }
-            .first {
-                margin-top: 20px;
-            }
+<head>
+    <title>Example form</title>
+    <style type="text/css">
+    .container {
+        width: 500px;
+        clear: both;
+    }
+    .container input {
+        width: 100%;
+        clear: both;
+    }
 
-        </style>
-    </head>
-    <body>
-        <div class="head">head</div>
-        <div class="body">
-            <!-- <p>a</p> -->
-            <div class="content fist">content</div>
-            <div class="content">content</div>
-            <div class="content">content</div>
-            <div class="content">content</div>
-            <div class="content">content</div>
-            <div class="content">content</div>
-            <div class="content">content</div>
-        </div>
-        <div class="foot">foot</div>
-
-    </body>
+    </style>
+</head>
+<body>
+<div class="container">
+<form>
+ <label>First Name</label>
+ <input type="text" name="first"><br />
+ <label>Last Name</label>
+ <input type="text" name="last"><br />
+ <label>Email</label>
+ <input type="text" name="email"><br />
+</form>
+</div>
+</body>
 </html>

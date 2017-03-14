@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>任务三：三栏式布局-position实现</title>
+        <style media="screen">
+            .container1 {
+                border: 10px #999 solid;
+                padding: 20px;
+                position: relative;
+            }
+            .container1 .block {
+                border: 2px #999 solid;
+                padding: 20px;
+            }
+            .container1 .left {
+                position: absolute;
+                width: 160px;
+                left:20px;
+                top: 20px;
+            }
+            .container1 .left span{
+                position: relative;
+                bottom: 68px;
+                left: 10px;
+            }
+            .container1 .center {
+                margin-left: 220px;
+                margin-right: 140px;
+            }
+            .container1 .right {
+                position: absolute;
+                width: 80px;
+                right: 20px;
+                top: 20px;
+                padding-bottom: 0px;
+            }
+            .container1 .right .img {
+                margin-bottom:20px;
+            }
+
+
+            .container2 {
+                border: 10px #999 solid;
+                padding: 20px;
+                position: relative;
+                overflow:auto;
+            }
+            .container2 .block {
+                border: 2px #999 solid;
+                padding: 20px;
+            }
+            .container2 .left {
+                width: 160px;
+                float: left;
+            }
+            .container2 .left span {
+                float: right;
+                margin-right: 20px;
+            }
+            .container2 .right {
+                float: right;
+            }
+            .container2 .center {
+                margin-left: 220px;
+                margin-right: 140px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align:center">1. 使用position实现三行自适应，存在高度无法自适应的问题</h1>
+        <div class="container1">
+            <div class="block left">
+                <img src="forest.png" alt="forest" width="80px" height="80px">
+                <span>Team</span>
+            </div>
+            <div class="block center">
+                <p>关于你们团队的介绍。</p>
+                <p>可以给我们解释一下团队名称的来历，或是分别介绍你们的团队成员。</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <p></p>
+            <div class="block right">
+                <div class="img">
+                    <img src="tree.png" alt="tree" width="80px" height="80px">
+                </div>
+                <div class="img">
+                    <img src="tree.png" alt="tree" width="80px" height="80px">
+                </div>
+                <div class="img">
+                    <img src="tree.png" alt="tree" width="80px" height="80px">
+                </div>
+                <div class="img">
+                    <img src="tree.png" alt="tree" width="80px" height="80px">
+                </div>
+
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 style="text-align:center">2. 使用float实现三行自适应</h1>
+        <div class="container2">
+            <div class="block left">
+                <img src="forest.png" alt="forest" width="80px" height="80px">
+                <span>Team</span>
+            </div>
+            <div class="block right">
+                <div class="img">
+                    <img src="tree.png" alt="tree" width="80px" height="80px">
+                </div>
+                <div class="img">
+                    <img src="tree.png" alt="tree" width="80px" height="80px">
+                </div>
+                <div class="img">
+                    <img src="tree.png" alt="tree" width="80px" height="80px">
+                </div>
+                <div class="img">
+                    <img src="tree.png" alt="tree" width="80px" height="80px">
+                </div>
+
+            </div>
+            <div class="block center">
+                <p>关于你们团队的介绍。</p>
+                <p>可以给我们解释一下团队名称的来历，或是分别介绍你们的团队成员。</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <p></p>
+
+
+        </div>
+    </body>
+</html>
