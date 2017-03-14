@@ -18,7 +18,10 @@
 
 3. 14/03/2017, task_1_3_1  
     心得:  
-    1. absolute定位，设置top和left为0后, 位置是padding box而不是content box
+    1. absolute定位，设置top和left为0后, 位置是padding box而不是content box.
     2. 使用absolute定位后，div的宽度变为内容宽度
     2. 对于span,img这样的inline元素，这是垂直方向的margin无效。
     参考：http://stackoverflow.com/questions/11700985/margin-top-not-working-for-span-element
+
+4. 14/03/2017, task_1_4_1  
+    参考：[css half circle](https://codepen.io/xram/pen/thLsk)
