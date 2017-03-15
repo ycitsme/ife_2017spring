@@ -25,16 +25,24 @@
 3. 14/03/2017, task_1_3_1  
     心得:  
     1. absolute定位，设置top和left为0后, 位置是padding box而不是content box.
-    2. 使用absolute定位后，div的宽度变为内容宽度
+    2. 使用absolute和float定位后，div的宽度变为内容宽度,但还是display:block.
     2. 对于span,img这样的inline元素，这是垂直方向的margin无效。
     参考：http://stackoverflow.com/questions/11700985/margin-top-not-working-for-span-element
 
 4. 14/03/2017, task_1_4_1  
     参考：[css half circle](https://codepen.io/xram/pen/thLsk)
 
-5. 13/03/2017, task_1_2_2
+5. 14/03/2017, task_1_2_2
     更新：
     解决task_1_2_1的三个问题，其他更新如下
     1. 使用更加语义化的标签header,footer,section,article,aside,figure,figcaption代替div。注意：这些新的语义化标签全是默认display:block的。
     2. 对齐导航栏
     3. 实现导航栏锚点功能
+    参考：https://www.w3schools.com/html/html5_semantic_elements.asp
+
+6. 15/03/2017, task1_5_1
+    总结:
+    1. section内有4个article和一个aside
+    2. aside使用绝对定位,section不设position:relative, 让aside以body为定位点. aside绝对定位后宽度为内容宽度，大约是420px,也可以手动再设置一个宽度.
+    3. article设置margin-left，让其到body右侧的距离等于article到aside的距离+article宽度+artcile两侧padding+article到body右侧的距离
+    参考：https://ycitsme.github.io/ife_2017spring/%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task_1_3_1.html
