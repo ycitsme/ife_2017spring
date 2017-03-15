@@ -44,5 +44,5 @@
     总结:
     1. section内有4个article和一个aside
     2. aside使用绝对定位,section不设position:relative, 让aside以body为定位点. aside绝对定位后宽度为内容宽度，大约是420px,也可以手动再设置一个宽度.
-    3. article设置margin-left，让其到body右侧的距离等于article到aside的距离+article宽度+artcile两侧padding+article到body右侧的距离
+    3. article设置margin-left:500，让其到body右侧的距离等于article到aside的距离(20)+article宽度(420)+artcile两侧padding(20*2)+article到body右侧的距离(20)
     参考：https://ycitsme.github.io/ife_2017spring/%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task_1_3_1.html
