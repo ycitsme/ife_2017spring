@@ -2,7 +2,7 @@
 
 ### 学习记录
 1. 07/03/2017, task_1_1_1
-2. 13/13/2017, task_1_2_1, GH-1
+2. 13/13/2017, task_1_2_1, [issue1](https://github.com/ycitsme/ife_2017spring/issues/1)  
     问题：  
     1. 整个页面分为head, body, foot三个部分。body和head,foot之间有一个margin, 不知道怎么消除，
     > 【于13/03/2017 21:40解决】解决方式：添加一个透明的border(border: 1px rgba(1,1,1,0) solid;)到body中。
@@ -47,7 +47,7 @@
     3. article设置margin-left:500，让其到body右侧的距离等于article到aside的距离(20)+article宽度(420)+artcile两侧padding(20*2)+article到body右侧的距离(20)
     参考：https://ycitsme.github.io/ife_2017spring/%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task_1_3_1.html
 
-7. 16/03/2017, task_1_5_1_float_问题
+7. 16/03/2017, task_1_5_1_float_问题 [issue2](https://github.com/ycitsme/ife_2017spring/issues/2)  
     将task_1_5_1作以下修改从position实现变为float实现两列自适应
     1. 将section中的aside移到section的所有article之上
     2. 将aside的css从position: absolute改为float:right
