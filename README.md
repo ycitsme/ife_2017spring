@@ -2,7 +2,7 @@
 
 ### 学习记录
 1. 07/03/2017, task_1_1_1
-2. 13/13/2017, task_1_2_1
+2. 13/13/2017, task_1_2_1, GH-1
     问题：  
     1. 整个页面分为head, body, foot三个部分。body和head,foot之间有一个margin, 不知道怎么消除，
     > 【于13/03/2017 21:40解决】解决方式：添加一个透明的border(border: 1px rgba(1,1,1,0) solid;)到body中。
@@ -40,9 +40,17 @@
     3. 实现导航栏锚点功能
     参考：https://www.w3schools.com/html/html5_semantic_elements.asp
 
-6. 15/03/2017, task1_5_1
+6. 15/03/2017, task_1_5_1
     总结:
     1. section内有4个article和一个aside
     2. aside使用绝对定位,section不设position:relative, 让aside以body为定位点. aside绝对定位后宽度为内容宽度，大约是420px,也可以手动再设置一个宽度.
     3. article设置margin-left:500，让其到body右侧的距离等于article到aside的距离(20)+article宽度(420)+artcile两侧padding(20*2)+article到body右侧的距离(20)
     参考：https://ycitsme.github.io/ife_2017spring/%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task_1_3_1.html
+
+7. 16/03/2017, task_1_5_1_float_问题
+    将task_1_5_1作以下修改从position实现变为float实现两列自适应
+    1. 将section中的aside移到section的所有article之上
+    2. 将aside的css从position: absolute改为float:right
+
+    问题
+    1. aside浮动不正常，增加section的border(如改为5px,本来是1px)之后浮动正常，但是不知道为什么

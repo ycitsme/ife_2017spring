@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>任务五：零基础HTML及CSS编码（二）</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            font-family:"Microsoft YaHei",微软雅黑;
+        }
+        .clearfix:after {
+            content: ".";
+            display:block;
+            clear: both;
+            height: 0px;
+            visibility: hidden;
+            overflow: none;
+        }
+        header{
+            background-color: rgb(51,51,51);
+            height: 50px;
+        }
+        /*后代选择器*/
+
+        header figure{
+            float: left;
+            margin: 0 0 0 50px;
+        }
+        header nav{
+            float: right;
+            margin-top: 0;
+            margin-right:50px;
+        }
+        header nav li {
+            display: inline-block;
+        }
+        header nav a:link {
+            color:white;
+        }
+        header nav a:visited {
+            color:#ccc;
+        }
+
+        section {
+            border: 1px rgba(111,111,111,0) solid; /*Add border to avoid margin collapsing */
+            background-color: rgb(222,222,222);
+        }
+        section article,section aside {
+            /*width: 90%;*/
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border: 1px rgb(230,230,230) solid;
+        }
+        /* use position to two column layout */
+        section article {
+            margin-right: 500px;
+        }
+        section aside {
+            /*position: absolute;*/
+            float: right;
+            /*width: 420px;*/
+            top: 51px;
+            right: 0px;
+        }
+        section #article3 figure {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            margin: 20px 0 20px 20px;
+            border: 1px grey solid;
+        }
+        section article .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        section article .table thead {
+            background-color: #333;
+            color: white;
+        }
+        section article .table tbody td{
+            border:1px solid #ccc;
+        }
+        section article .table tfoot {
+            background-color: rgb(204,204,204);
+            font-weight: bolder;
+        }
+
+        aside h2 {
+            border-left: 3px #ccc solid;
+            padding-left: 5px;
+        }
+        aside .form {
+            /*border: 1px red solid;*/
+        }
+        aside .form fieldset {
+            border: none;
+        }
+        aside .form fieldset label{
+            display: inline-block;
+            width: 45%;
+            margin-right: 10px;
+            text-align: right;
+            vertical-align: top;
+        }
+        aside .form fieldset .right{
+            display: inline-block;
+            text-align: left;
+        }
+        aside .form fieldset .right div{
+            margin-top: 10px;
+            color: #ccc;
+        }
+        aside .form .button {
+            margin-top:10px;
+            width: 100%;
+            background-color: rgb(51,85,208);
+            color: white;
+            border-radius: 10px;
+            height: 40px;
+        }
+
+        footer {
+            background-color: rgb(51,51,51);
+            color: white;
+        }
+        footer .foot1 {
+            /*height: 20px;*/
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Head -->
+    <header class="clearfix">
+        <figure class="head1">
+            <img src="baidulogo2.png" alt="baidulogo", height="40px" width="100px">
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="#article1">导航链接一</a></li>
+                <li><a href="#article2">导航链接二</a></li>
+                <li><a href="#article3">导航链接三</a></li>
+                <li><a href="#article4">导航链接四</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Body -->
+    <section>
+        <aside>
+            <h2>这里以后是一个侧栏，这是侧栏的标题</h2>
+            <form class="form" action="/register.php" method="post">
+                <fieldset>
+                    <label for="mail">请输入邮箱地址</label>
+                    <div class="right">
+                        <input type="text" name="mail" value="@example.com">
+                        <div>邮箱地址请按要求格式输入</div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <label for="password" class="left">请输入密码</label>
+                    <div class="right">
+                        <input type="text" name="password" value="">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <label for="password" class="left">请重复输入密码</label>
+                    <div class="right">
+                        <input class="right"  type="text" name="" value="">
+                        <div>密码请为6-16位英文数字</div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <label for="gender" class="left">性别</label>
+                    <div class="right">
+                        <input  type="radio" name="gender" value="男" checked><span>男</span>
+                        <input type="radio" name="gender" value="女"><span>女</span>
+                    </div><br>
+                </fieldset>
+
+                <fieldset>
+                    <label for="city" class="left">城市</label>
+                    <select class="right" name="city">
+                        <option value="北京">北京</option>
+                        <option value="北京">上海</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <label for="interest" class="left">爱好</label>
+                    <div class="right">
+                        <input type="checkbox" name="interest" value="运动"><span>运动</span>
+                        <input type="checkbox" name="interest" value="艺术"><span>艺术</span>
+                        <input type="checkbox" name="interest" value="科学"><span>科学</span>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <label for="description" class="left">个人描述</label>
+                    <div class="right">
+                        <textarea name="description" rows="10" cols="25">这里输入个人描述</textarea>
+                    </div>
+                </fieldset>
+
+                <input class="button" type="submit" name="" value="确认提交">
+            </form>
+        </aside>
+        <article id="article1">
+            <h1>文章一级标题</h1>
+            <h2>文章二级标题</h2>
+            <h3>文章作者 文章发表时间</h3>
+            <p>&nbsp;&nbsp;这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://life.baidu.com">里有一个链接链接到http://life.baidu.com</a>这是一个很长很长 的段落，这是一个很长很长的段落,这是一个很长很长 的段落，这是一个很长很长的段落这是一个很长很长 的段落，这是一个很长很长的段落这是一个很长很长 的段落，这是一个很长很长的段落.</p>
+            <img src="算盘.jpg" alt="">
+            <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://life.baidu.com">里有一个链接链接到http://life.baidu.com</a>这是一个很长很长 的段落，这是一个很长很长的段落,这是一个很长很长 的段落，这是一个很长很长的段落这是一个很长很长 的段落，这是一个很长很长的段落这是一个很长很长 的段落，这是一个很长很长的段落.</p>
+        </article>
+        <article id="article2">
+            <h1>另一篇文章一级标题</h1>
+            <h2>文章二级标题</h2>
+            <h3>文章作者 文章发表时间</h3>
+            <p>&nbsp;&nbsp;这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://life.baidu.com">里有一个链接链接到http://life.baidu.com</a>这是一个很长很长 的段落，这是一个很长很长的段落,这是一个很长很长 的段落，这是一个很长很长的段落这是一个很长很长 的段落，这是一个很长很长的段落这是一个很长很长 的段落，这是一个很长很长的段落.</p>
+            <img src="算盘.jpg" alt="">
+            <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://life.baidu.com">里有一个链接链接到http://life.baidu.com</a>这是一个很长很长 的段落，这是一个很长很长的段落,这是一个很长很长 的段落，这是一个很长很长的段落这是一个很长很长 的段落，这是一个很长很长的段落这是一个很长很长 的段落，这是一个很长很长的段落.</p>
+            <ul>
+                <li>列表项目一</li>
+                <li>列表项目二</li>
+                <li>列表项目三</li>
+            </ul>
+        </article>
+        <article id="article3">
+            <h1>图片</h1>
+            <figure>
+                <figcaption>好看的图片</figcaption>
+                <img src="算盘.jpg" alt="" height="100px;">
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
+                <img src="算盘.jpg" alt="" height="100px;">
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
+                <img src="算盘.jpg" alt="" height="100px;">
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
+                <img src="算盘.jpg" alt="" height="100px;">
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
+                <img src="算盘.jpg" alt="" height="100px;">
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
+                <img src="算盘.jpg" alt="" height="100px;">
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
+                <img src="算盘.jpg" alt="" height="100px;">
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
+                <img src="算盘.jpg" alt="" height="100px;">
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
+                <img src="算盘.jpg" alt="" height="100px;">
+            </figure>
+            <figure>
+                <figcaption>好看的图片</figcaption>
+                <img src="算盘.jpg" alt="" height="100px;">
+            </figure>
+
+
+        </article>
+        <article id="article4">
+            <h1>最后一篇文章一级标题</h1>
+            <h2>文章二级标题</h2>
+            <h3>文章作者 文章发表时间</h3>
+            <ol>
+                <li>排名1</li>
+                <li>排名2</li>
+                <li>排名3</li>
+            </ol>
+            <p>下面是一个表格，我这里给表格加了一个border="1"好你看出是一个表格，你们写html时候不需要加</p>
+            <table class="table">
+                <thead>
+                    <td>表头</td><td>表头</td><td>表头</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>表内容单元格</td><td>表内容单元格</td><td><a href="#">操作</a></td>
+                    </tr>
+                    <tr>
+                        <td>表内容单元格</td><td>表内容单元格</td><td><a href="#">操作</a></td>
+                    </tr>
+                    <tr>
+                        <td>表内容单元格</td><td>表内容单元格</td><td><a href="#">操作</a></td>
+                    </tr>
+                    <tr>
+                        <td>表内容单元格</td><td>表内容单元格</td><td><a href="#">操作</a></td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td>总计</td><td colspan="2">1000</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </article>
+
+    </section>
+    <!-- Foot -->
+    <footer>
+        <div class="foot1">
+            版权所有&copy;
+        </div>
+    </footer>
+</body>
+</html>
