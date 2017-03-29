@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .clearcollapse::before{
+            content: "";
+            display: table;
+        }
+        body {
+            margin: 0 auto;
+            border: 1px #ccc solid;
+            height: 1386px;
+            width: 980px;
+        }
+        header, section, footer {
+            margin-left: 44px;
+            margin-right: 44px;
+        }
+        header {
+            position: relative;
+            border-bottom:2px #938e8c solid;
+        }
+        header .logo {
+            height: 61px;
+            width: 110px;
+            background-image: url("task_1_6 左上红色块.png");
+        }
+        header .logo p{
+            margin: 0;
+            position: absolute;
+            bottom: 0;
+        }
+        header .date {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        header .date p {
+            margin: 0;
+            font: 12px 黑体;
+            color: #d45d5c;
+        }
+        .about {
+            position: relative;
+        }
+        .about figure {
+            margin: 20px 0;
+            width: 641px;
+            height: 300px;
+            background-image: url("task_1_6 绿色遮罩.png"),url("task_1_6 红色遮罩.png"),url("task_1_6 左上大图.png");
+            background-position: left, right, center;
+            background-repeat: no-repeat, no-repeat, no-repeat;
+        }
+        .about .intro {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 203px;
+            height: 641px;
+            border-top: 2px #cc8091 solid;
+
+        }
+        .about .intro h2 {
+            margin: 0;
+            font: 24px "Microsoft YaHei";
+            text-decoration: underline;
+            color: #000000;
+            font-variant: small-caps;
+        }
+        .about .intro .description {
+            font: 12px/10px 楷体;
+            color: #676767;
+        }
+        .about .intro .length {
+            font: italic 116px "Microsoft YaHei";
+            color: #75b86b;
+            text-decoration: underline;
+            margin: 0;
+        }
+        .about .intro .score {
+            font:55px "Microsoft YaHei";
+            color: #cc8091;
+        }
+        .about .intro .tag {
+            font:21px "Microsoft YaHei";
+            color: #cc8091;
+            position: relative;
+            top: -21px;
+        }
+        .about .intro .comment {
+            font:12px "Microsoft YaHei";
+            color: #cc8091;
+            position: relative;
+            top: -30px;
+            left: 80px;
+        }
+        .about .article {
+            width: 200px;
+            margin-right: 10px;
+            float: left;
+        }
+
+        .about .article h3 {
+            font: 16px bold "Microsoft YaHei";
+            text-decoration: underline;
+        }
+        .about .what h3 {
+            color: #418c59;
+        }
+        .about .when h3 {
+            color: #d2994f;
+        }
+        .about .how h3 {
+            color: #cc7680;
+        }
+        .about .what p {
+            font: 12px/16px 宋体;
+            color: #767777;
+        }
+        .about .when p {
+            font: 12px/16px "Microsoft YaHei";
+            color: #231815;
+            opacity: 0.7;
+        }
+        .about .how p {
+            font: 12px/16px "Microsoft YaHei";
+            color: #231815;
+            opacity: 0.7;
+        }
+        .about .how ul{
+            padding:0;
+            list-style-type:none;
+        }
+        .about .how li span{
+            font: italic 12px/16px "Microsoft YaHei";
+            color: #cd4a48;
+            opacity: 0.7;
+        }
+        .technique {
+            /*border: 1px red solid;*/
+        }
+        .left-technique {
+            /*border: 1px green solid;*/
+            width: 415px;
+            float: left;
+        }
+        .left-technique .title {
+            border-bottom: 2px black solid;
+        }
+        .left-technique .title-en {
+            font: bold 42px/16px 黑体;
+            color: #11456b;
+        }
+        .left-technique .title-en em{
+            font: bold 72px 黑体;
+            color: #f5e327;
+        }
+        .left-technique .title-cn {
+            font:bold 33px 黑体;
+            color: #11456b;
+        }
+        .left-technique .content .capital {
+            font: 70px/1 "Microsoft YaHei";
+            color:#f5e327;
+            float:left;
+        }
+        .left-technique .content img {
+            float:right;
+            margin: 12px;
+            position: relative;
+        }
+        .left-technique .content .p1 {
+            margin-bottom:0;
+            font: 12px/16px 宋体;
+            color: #767777;
+        }
+        .left-technique .content .p2 {
+            margin:0;
+            font: 12px/16px 宋体;
+            color: #767777;
+        }
+        .left-technique .content .p3 {
+            margin:0;
+            font: 12px/16px 宋体;
+            color: #767777;
+            text-indent: 2em;
+        }
+        .left-technique .content .p4 {
+            margin: 0;
+            font: 12px/16px 宋体;
+            color: #767777;
+            text-indent: 2em;
+        }
+
+        .right-technique {
+            /*border: 1px blue solid;*/
+            width: 458px;
+            float: right;
+        }
+        .right-technique .top {
+            width: 458px;
+            height: 257px;
+            background-image: url("task_1_6 配图二灰色遮盖条.png"), url("task_1_6 配图二.png");
+            background-position: bottom,center;
+            background-repeat: no-repeat, no-repeat;
+            position: relative;
+        }
+        .right-technique .top p{
+            margin: 0px;
+            margin-left: 20px;
+            padding-left: 10px;
+            width: 458px;
+            height: 44px;
+            position: absolute;
+            bottom: 8px;
+            border-left: 3px #72b16a solid;
+            font: 26px "Microsoft YaHei";
+            color: #fff;
+        }
+        .right-technique .top span {
+            font: italic 12px/140% "Microsoft YaHei";
+            color:#72b16a;
+        }
+        .right-technique .bottom {
+            width: 459px;
+            height: 318px;
+            background-image: url("task_1_6 右下浅绿色块.png");
+            position: relative;
+            margin-top: 20px;
+        }
+        .right-technique .bottom ul {
+            list-style-type: none;
+            padding:0;
+            margin: 20px 0 20px 20px;
+        }
+        .right-technique .bottom li {
+            margin: 20px;
+            padding-left: 16px;
+            font:italic 12px/20px 宋体;
+            color: #5a5b5b;
+        }
+        .right-technique .bottom li::before {
+            content: "▲"; /*直接用微软默认输入法输三角形*/
+            padding-right:8px;
+        }
+        .right-technique .bottom .left-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 240px;
+            height: 100px;
+            background-image: url("task_1_6 右下红色块.png");
+            margin-right:10px;
+            padding: 30px 10px;
+        }
+        .right-technique .bottom .left-bottom .text1 {
+            margin:0 10px 0 0;
+            height: 86px;
+            font: 110px/86px "Microsoft YaHei";
+            color:#fff;
+            border-right: 2px white solid;
+            float: left;
+
+        }
+
+        .right-technique .bottom .left-bottom .text2 {
+            margin:0px;
+            font: italic 21px/24px 黑体;
+            color: #fff;
+        }
+        .right-technique .bottom .left-bottom .text3 {
+            margin:0px;
+            font: 12px/6px 黑体;
+            color: #fff;
+        }
+        .right-technique .bottom .right-bottom {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            width: 178px;
+            height: 160px;
+            margin-left:10px;
+            margin-right: 10px;
+            font:italic 14px 黑体;
+            color: #5a5b5b;
+            text-indent: -50px;
+        }
+        .right-technique .bottom .right-bottom span {
+            font:normal 72px/16px 黑体;
+            color: #d45d5c;
+            vertical-align: bottom;
+
+        }
+        .right-technique .bottom .right-bottom span.left-quot{
+            position: relative;
+            top: 15px;
+        }
+        .right-technique .bottom .right-bottom span.right-quot{
+            position: relative;
+            left: 120px;
+            top:8px;
+        }
+
+        footer {
+            border-top: 1px #938e8c solid;
+            height: 100px;
+        }
+        footer .website {
+            float:right;
+            font: 12px 黑体;
+            color: #d45d5c;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <p>ife.baidu.com</p>
+            </div>
+            <div class="date">
+                <p>2016.03</p>
+            </div>
+        </header>
+        <section class="about clearfix">
+            <figure>
+            </figure>
+            <article class="intro">
+                <h2>About Techonologe</h2>
+                <p class="description">About techonologe about technologe about technologe</p>
+                <p class="length">700</p>
+                <span class="score">3.2</span>
+                <span class="tag">CSS</span>
+                <span class="comment">CSSSSCCSCCSCSSC</span>
+            </article>
+            <article class="article what">
+                <h3>What</h3>
+                <p>端前端前端端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端端前端前端</p>
+            </article>
+            <article class="article when">
+                <h3>When</h3>
+                <p>端前端前端端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端端前端前端</p>
+            </article>
+            <article class="article how">
+                <h3>How</h3>
+                <p>前端前端端前端前端</p>
+                <p>前端前端前端前端前端前端前端前端端前</p>
+                <ul>
+                    <li>What------- <span>40%</span></li>
+                    <li>What------- <span>30%</span></li>
+                    <li>What------- <span>30%</span></li>
+                </ul>
+            </article>
+
+        </section>
+        <section class="technique clearfix">
+            <div class="left-technique">
+                <div class="title">
+                    <h2 class="title-en"><em>The</em> Technologe Of Front</h2>
+                    <p class="title-cn">前端技术领域</p>
+                </div>
+                <div class="content">
+                    <p class="p1"><span class="capital">前</span>端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前</p>
+                    <img src="task_1_6 配图三.png" alt="">
+                    <p class="p2">
+                    端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+                    </p>
+                    <p class="p3">
+                    端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+                    </p>
+                    <p class="p4">
+                    端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前
+                    </p>
+
+                </div>
+            </div>
+            <div class="right-technique">
+                <div class="top">
+                    <p>前端技术<span>前端技术前端技术</span></p>
+                </div>
+                <div class="bottom clearcollapse">
+                    <ul>
+                        <li>前端前端前端前端前端前端....................前端</li>
+                        <li>前端前端前端前端...........................前段前</li>
+                        <li>前端前端前端前端前端前端前端.................前端</li>
+                    </ul>
+                    <div class="left-bottom">
+                        <p class="text1">0</p>
+                        <p class="text2">ONE TWO<br> THREE FORE FIVE</p>
+                        <p class="text3">hello world hello world hello world</p>
+
+                    </div>
+                    <div class="right-bottom">
+                        <span class="left-quot">“</span>world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world &nbsp;&nbsp;&nbsp;&nbsp; <span class="right-quot">”</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <div class="website">
+                ife.baidu.com
+            </div>
+        </footer>
+    </body>
+</html>
