@@ -1,6 +1,7 @@
 # ife_2017spring
 
 ### 学习记录
+[实现效果index](https://ycitsme.github.io/ife_2017spring/)
 1. 07/03/2017, task_1_1_1
 2. 13/13/2017, task_1_2_1, [issue1](https://github.com/ycitsme/ife_2017spring/issues/1)  
     问题：  
@@ -24,7 +25,7 @@
 
 3. 14/03/2017, task_1_3_1  
     心得:  
-    1. absolute定位，设置top和left为0后, 位置是padding box而不是content box.
+    1. absolute定位，设置top和left为0后, 位置是padding box而不是content box. float: left是移动到content box的最左侧而不是padding box。
     2. 使用absolute和float定位后，div的宽度变为内容宽度,但还是display:block.
     2. 对于span,img这样的inline元素，这是垂直方向的margin无效。
     参考：http://stackoverflow.com/questions/11700985/margin-top-not-working-for-span-element
@@ -54,3 +55,26 @@
 
     问题
     1. aside浮动不正常，增加section的border(如改为5px,本来是1px)之后浮动正常，但是不知道为什么
+
+8. 29/03/2017， task1_6_1
+    总结：
+    1. 总的结构是body->header, section.about, section.technique, footer
+    2. header部分：左侧是logo，右侧是日期，使用绝对定位实现
+    3. section.about部分: 左边是三张图片组成的一张图片，右边是一个介绍，坐下是三篇小文章。右侧介绍使用绝对定位，三篇小文章使用float:left,记得在section.about上使用clearfix清除浮动效果.
+    ```css
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    ```
+    4. section.techonologe部分: 左边是标题和一篇文章，右边是一张图片标题和一个小模块。左右整体布局使用float. 左侧内部图片浮动效果使用float实现;右侧内部的列表前缀可以通过伪元素(content: "▲";)实现,双引号区域的实现借助text-indent,vertical-align和相对对位，为了解决ul和它父元素的margin collapsing（外边距合并）问题，自己想出了以下方法，通过类似clearfix的伪元素方式在ul前面增加空字符串，并设置不可见。
+    ```css
+    .clearcollapse::before{
+        content: "";
+        display: table;
+    }
+    ```
+    左侧内部实现图片周围环绕文字时遇到问题:
+        1. 如何实现图像四周环绕排列，并没有float: center这样的元素。float+绝对定位会使float失效，float+相对定位不会影响float周围的元素排列（float周围元素的排列和没有相对定位使相同，相对定位只移动其本身）
+    5. footer: 只有一个上边框和网址，使用float:right即可。
